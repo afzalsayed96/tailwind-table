@@ -7,7 +7,7 @@ const Table = () => {
     <div className="min-w-full shadow overflow-hidden sm:rounded-lg border-gray-200">
       <div
         className="grid grid-cols-1 overflow-auto bg-white relative"
-        style={{ height: 480 }}
+        style={{ height: 500 }}
       >
         <table className="min-w-full divide-y divide-gray-200 col-start-1 col-span-1 row-span-1 row-start-1">
           <thead>
@@ -91,13 +91,13 @@ const Table = () => {
         <table className="min-w-full divide-y divide-gray-200 sticky left-0 col-start-1 col-span-1 row-span-1 row-start-1">
           <thead>
             <tr>
-              <th className="sticky top-0 bg-white z-10 px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider bg-white border-r-2 border-gray-200 md:border-0 sticky left-0">
+              <th className="sticky top-0 bg-white z-10 px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider bg-white sticky left-0">
                 {Object.keys(props.consolidated_holdings[0])[0]}
               </th>
-              <th className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible md:visible md:bg-white border-r-2 border-gray-200 lg:border-0">
+              <th className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible md:visible md:bg-white">
                 {Object.keys(props.consolidated_holdings[0])[1]}
               </th>
-              <th className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible lg:visible lg:bg-white border-r-2 border-gray-200">
+              <th className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible lg:visible lg:bg-white">
                 {Object.keys(props.consolidated_holdings[0])[2]}
               </th>
               {Object.keys(props.consolidated_holdings[0])
@@ -117,7 +117,7 @@ const Table = () => {
               <tr key={index}>
                 <td
                   className={
-                    "whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 bg-white border-r-2 border-gray-200 md:border-0 sticky left-0" +
+                    "whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 bg-white sticky left-0" +
                     (typeof row[
                       Object.keys(props.consolidated_holdings[0])[0]
                     ] === "number"
@@ -131,7 +131,7 @@ const Table = () => {
                 </td>
                 <td
                   className={
-                    "whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 invisible md:visible md:bg-white border-r-2 border-gray-200 lg:border-0" +
+                    "whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 invisible md:visible md:bg-white" +
                     (typeof row[
                       Object.keys(props.consolidated_holdings[0])[1]
                     ] === "number"
@@ -145,7 +145,7 @@ const Table = () => {
                 </td>
                 <td
                   className={
-                    "whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 invisible lg:visible lg:bg-white border-r-2 border-gray-200" +
+                    "whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 invisible lg:visible lg:bg-white" +
                     (typeof row[
                       Object.keys(props.consolidated_holdings[0])[2]
                     ] === "number"
