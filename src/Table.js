@@ -86,7 +86,7 @@ const Table = () => {
           </tbody>
         </table>
 
-        <table className="table-fixed min-w-full divide-y divide-gray-200 sticky left-0 top-0 col-start-1 col-span-1 row-span-1 row-start-1">
+        <table className="table-fixed min-w-full divide-y divide-gray-200 sticky left-0 col-start-1 col-span-1 row-span-1 row-start-1">
           <thead>
             <tr>
               <th className="px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider bg-white border-r-2 border-gray-200 md:border-0">
