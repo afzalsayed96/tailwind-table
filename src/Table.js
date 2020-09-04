@@ -12,7 +12,7 @@ const Table = () => {
         <table className="min-w-full divide-y divide-gray-200 col-start-1 col-span-1 row-span-1 row-start-1">
           <thead>
             <tr>
-              <th className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible">
+              <th className="bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible">
                 {Object.keys(props.consolidated_holdings[0])[0]}
               </th>
               <th className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider md:invisible">
@@ -104,7 +104,7 @@ const Table = () => {
                 .slice(3, -1)
                 .map((column, index) => (
                   <th
-                    className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible"
+                    className="px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible"
                     key={index}
                   >
                     {column}
