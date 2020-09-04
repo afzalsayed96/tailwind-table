@@ -4,10 +4,10 @@ let props = data;
 
 const Table = () => {
   return (
-    <div className="min-w-full shadow overflow-hidden sm:rounded-lg border-gray-200">
+    <div className="min-w-full shadow overflow-hidden rounded-lg border-gray-200">
       <div
         className="grid grid-cols-1 overflow-auto bg-white relative"
-        style={{ height: 500 }}
+        style={{ maxHeight: 520 }}
       >
         <table className="min-w-full divide-y divide-gray-200 col-start-1 col-span-1 row-span-1 row-start-1">
           <thead>
