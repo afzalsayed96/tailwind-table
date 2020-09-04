@@ -1,2 +1,2 @@
 # tailwind-table
-Created with CodeSandbox
+## WIP
