@@ -5,18 +5,25 @@ function TableCell({ className = "", style, children = "" }) {
   return (
     <div
       className={
-        "inline-block w-40 px-6 py-3 " +
+        "inline-block w-40 px-6 py-3 truncate " +
         className +
         (typeof children === "number"
           ? children < 0
-            ? " text-right text-red-500 tabular-nums"
-            : " text-right tabular-nums"
+            ? " text-red-500 tabular-nums"
+            : " tabular-nums"
           : "")
       }
       style={style}
       title={children}
     >
-      <span>
+      <span
+        className="inline-block w-full"
+        style={{
+          textOverflow: "fade",
+          WebkitMaskImage:
+            "-webkit-linear-gradient(left, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%)"
+        }}
+      >
         {typeof children === "number" ? children.toFixed(2) : children}
       </span>
     </div>
@@ -98,7 +105,7 @@ function FixedTable() {
       style={{ maxHeight: 480 }}
     >
       <TableRow
-        className="sticky top-0 bg-white z-20 text-gray-500 uppercase tracking-wider text-xs leading-4 font-medium text-center"
+        className="sticky top-0 bg-white z-20 text-gray-500 uppercase tracking-wider text-xs leading-4 font-medium "
         values={Object.keys(props.consolidated_holdings[0])}
       />
       {props.consolidated_holdings.map((row, index) => (

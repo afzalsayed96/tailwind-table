@@ -11,7 +11,7 @@ function App() {
         style={{ maxHeight: 480 }}
       >
         <TableRow
-          className="sticky top-0 bg-white z-20 text-gray-500 uppercase tracking-wider text-xs leading-4 font-medium text-center"
+          className="sticky top-0 bg-white z-20 text-gray-500 uppercase tracking-wider text-xs leading-4 font-medium"
           values={Object.keys(props.consolidated_holdings[0])}
         />
         {props.consolidated_holdings.map((row, index) => (
