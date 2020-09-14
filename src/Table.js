@@ -12,13 +12,13 @@ const Table = () => {
         <table className="min-w-full divide-y divide-gray-200 col-start-1 col-span-1 row-span-1 row-start-1">
           <thead>
             <tr>
-              <th className="bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible">
+              <th className="bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible pointer-events-none">
                 {Object.keys(props.consolidated_holdings[0])[0]}
               </th>
-              <th className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider md:invisible">
+              <th className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider md:invisible pointer-events-none">
                 {Object.keys(props.consolidated_holdings[0])[1]}
               </th>
-              <th className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider lg:invisible">
+              <th className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider lg:invisible pointer-events-none">
                 {Object.keys(props.consolidated_holdings[0])[2]}
               </th>
               {Object.keys(props.consolidated_holdings[0])
@@ -36,12 +36,12 @@ const Table = () => {
           <tbody className="divide-y divide-gray-200">
             {props.consolidated_holdings.map((row, index) => (
               <tr key={index}>
-                <td className="whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 invisible">
+                <td className="whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 invisible pointer-events-none">
                   {row[Object.keys(props.consolidated_holdings[0])[0]]}
                 </td>
                 <td
                   className={
-                    "whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 md:invisible" +
+                    "whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 md:invisible pointer-events-none" +
                     (typeof row[
                       Object.keys(props.consolidated_holdings[0])[1]
                     ] === "number"
@@ -55,7 +55,7 @@ const Table = () => {
                 </td>
                 <td
                   className={
-                    "whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 lg:invisible" +
+                    "whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 lg:invisible pointer-events-none" +
                     (typeof row[
                       Object.keys(props.consolidated_holdings[0])[1]
                     ] === "number"
@@ -94,17 +94,17 @@ const Table = () => {
               <th className="sticky top-0 bg-white z-10 px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider bg-white sticky left-0">
                 {Object.keys(props.consolidated_holdings[0])[0]}
               </th>
-              <th className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible md:visible md:bg-white">
+              <th className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible pointer-events-none md:visible md:bg-white">
                 {Object.keys(props.consolidated_holdings[0])[1]}
               </th>
-              <th className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible lg:visible lg:bg-white">
+              <th className="sticky top-0 bg-white px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible pointer-events-none lg:visible lg:bg-white">
                 {Object.keys(props.consolidated_holdings[0])[2]}
               </th>
               {Object.keys(props.consolidated_holdings[0])
                 .slice(3, -1)
                 .map((column, index) => (
                   <th
-                    className="px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible"
+                    className="px-6 py-3 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider invisible pointer-events-none"
                     key={index}
                   >
                     {column}
@@ -131,7 +131,7 @@ const Table = () => {
                 </td>
                 <td
                   className={
-                    "whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 invisible md:visible md:bg-white" +
+                    "whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 invisible pointer-events-none md:visible md:bg-white" +
                     (typeof row[
                       Object.keys(props.consolidated_holdings[0])[1]
                     ] === "number"
@@ -145,7 +145,7 @@ const Table = () => {
                 </td>
                 <td
                   className={
-                    "whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 invisible lg:visible lg:bg-white" +
+                    "whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 invisible pointer-events-none lg:visible lg:bg-white" +
                     (typeof row[
                       Object.keys(props.consolidated_holdings[0])[2]
                     ] === "number"
@@ -161,7 +161,7 @@ const Table = () => {
                   .slice(3, -1)
                   .map((column, cellIndex) => (
                     <td
-                      className="whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 invisible"
+                      className="whitespace-no-wrap text-sm leading-5 font-medium text-gray-900 px-6 py-3 invisible pointer-events-none"
                       key={cellIndex}
                     >
                       {row[column]}
