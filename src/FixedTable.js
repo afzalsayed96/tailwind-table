@@ -56,7 +56,7 @@ function TableRow({ className = "", values = [] }) {
       >
         {values[2]}
       </TableCell>
-      {values.slice(3, -1).map((value, index) => (
+      {values.slice(3).map((value, index) => (
         <TableCell key={index}>{value}</TableCell>
       ))}
     </div>
@@ -88,7 +88,7 @@ function TableAccordionRow({ className = "", values = [], children }) {
           >
             {values[2]}
           </TableCell>
-          {values.slice(3, -1).map((value, index) => (
+          {values.slice(3).map((value, index) => (
             <TableCell key={index}>{value}</TableCell>
           ))}
         </div>
